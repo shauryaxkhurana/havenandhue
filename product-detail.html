@@ -6,19 +6,16 @@
   <title>Haven & Hue — Product Detail</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Hide all product sections by default */
     .product-detail-section {
       display: none;
       padding: 2rem 0;
     }
-    /* Show the targeted section */
     .product-detail-section:target {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       align-items: flex-start;
     }
-    /* If no target, show the first product by default */
     body:not(:has(:target)) .product-detail-section:first-of-type {
       display: flex;
       flex-wrap: wrap;
