@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Haven & Hue — Products</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .search-bar {
+      margin: 1rem 0 2rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .search-bar input {
+      flex: 1;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .search-bar button {
+      padding: 0.6rem 1rem;
+      border: none;
+      background: var(--accent, #ff6b6b);
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -28,7 +51,13 @@
       <h1 style="margin-top:0">All Products</h1>
       <p style="color:var(--muted)">Browse our curated collection — click any product for more details.</p>
 
-      <section class="products-grid" aria-live="polite" aria-busy="false">
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products">
+        <button onclick="searchProducts()">Search</button>
+      </div>
+
+      <section id="productList" class="products-grid" aria-live="polite" aria-busy="false">
         <article class="card">
           <img class="media" src="image copy.png" alt="Wool rug">
           <div class="content">
@@ -80,5 +109,22 @@
       <div><a href="index.html">Back to Home</a></div>
     </footer>
   </div>
+
+  <script>
+    function searchProducts() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let products = document.querySelectorAll("#productList .card");
+
+      products.forEach(product => {
+        let title = product.querySelector(".title").textContent.toLowerCase();
+        if (title.includes(input)) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+    document.getElementById("searchInput").addEventListener("input", searchProducts);
+  </script>
 </body>
 </html>
