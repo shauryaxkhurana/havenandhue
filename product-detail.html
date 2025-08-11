@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haven & Hue — Product Detail</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hide all product sections by default */
+    .product-detail-section {
+      display: none;
+      padding: 2rem 0;
+    }
+    /* Show the targeted section */
+    .product-detail-section:target {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    /* If no target, show the first product by default */
+    body:not(:has(:target)) .product-detail-section:first-of-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .product-hero img {
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    .detail-box {
+      flex: 1;
+      min-width: 300px;
+    }
+    .price-big {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .add-cart {
+      display: inline-block;
+      background: var(--accent, #ff6b6b);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">H&H</div>
+        <div>
+          <div style="font-weight:800">Haven &amp; Hue</div>
+          <div style="font-size:.85rem;color:var(--muted)">Product Details</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Product 1 -->
+      <section id="handwoven-wool-rug" class="product-detail-section">
+        <div class="product-hero">
+          <img src="image copy.png" alt="Handwoven wool rug">
+        </div>
+        <aside class="detail-box">
+          <h1>Handwoven Wool Rug</h1>
+          <p>Soft, durable handwoven wool rug crafted by skilled artisans. Adds a cozy and stylish touch to any space.</p>
+          <p class="price-big">₹4,250</p>
+          <p style="color:var(--muted)">Dimensions: 150×200cm • Material: 100% Wool • Handcrafted in India</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+
+      <!-- Product 2 -->
+      <section id="velvet-accent-chair" class="product-detail-section">
+        <div class="product-hero">
+          <img src="image copy 2.png" alt="Velvet accent chair">
+        </div>
+        <aside class="detail-box">
+          <h1>Velvet Accent Chair</h1>
+          <p>Luxurious velvet chair with a modern silhouette. Perfect for living rooms, reading nooks, or bedrooms.</p>
+          <p class="price-big">₹12,999</p>
+          <p style="color:var(--muted)">Dimensions: 80×75×85cm • Material: Velvet, Wood</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+
+      <!-- Product 3 -->
+      <section id="minimal-wall-art" class="product-detail-section">
+        <div class="product-hero">
+          <img src="image copy 3.png" alt="Minimal wall art">
+        </div>
+        <aside class="detail-box">
+          <h1>Minimal Wall Art</h1>
+          <p>Framed minimalist wall art print, perfect for contemporary interiors. Neutral tones suit any room decor.</p>
+          <p class="price-big">₹2,100</p>
+          <p style="color:var(--muted)">Dimensions: 50×70cm • Material: Canvas, Wood Frame</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+
+      <!-- Product 4 -->
+      <section id="mid-century-console-table" class="product-detail-section">
+        <div class="product-hero">
+          <img src="image copy 4.png" alt="Mid-century console table">
+        </div>
+        <aside class="detail-box">
+          <h1>Mid-century Console Table</h1>
+          <p>Elegant console table inspired by mid-century design, ideal for entryways and living spaces.</p>
+          <p class="price-big">₹8,400</p>
+          <p style="color:var(--muted)">Dimensions: 120×40×75cm • Material: Walnut Wood</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+
+      <!-- Product 5 -->
+      <section id="oak-side-table" class="product-detail-section">
+        <div class="product-hero">
+          <img src="image.png" alt="Oak side table">
+        </div>
+        <aside class="detail-box">
+          <h1>Oak Side Table</h1>
+          <p>Solid oak side table with tapered legs and a natural finish. Perfect for living rooms or beside a bed.</p>
+          <p class="price-big">₹3,499</p>
+          <p style="color:var(--muted)">Dimensions: 45×45×55cm • Material: Oak • Made in India</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+
+      <!-- Product 6 -->
+      <section id="linen-two-seater-sofa" class="product-detail-section">
+        <div class="product-hero">
+          <img src="img2.png" alt="Linen two-seater sofa">
+        </div>
+        <aside class="detail-box">
+          <h1>Linen Two-Seater Sofa</h1>
+          <p>Modern linen sofa with plush cushions. Ideal for compact living spaces while offering comfort and style.</p>
+          <p class="price-big">₹21,900</p>
+          <p style="color:var(--muted)">Dimensions: 160×80×85cm • Material: Linen, Wood</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+
+      <!-- Product 7 -->
+      <section id="ceramic-table-lamp" class="product-detail-section">
+        <div class="product-hero">
+          <img src="img1.png" alt="Ceramic table lamp">
+        </div>
+        <aside class="detail-box">
+          <h1>Ceramic Table Lamp</h1>
+          <p>Handcrafted ceramic lamp with a soft linen shade. Adds warmth and ambiance to any corner.</p>
+          <p class="price-big">₹1,199</p>
+          <p style="color:var(--muted)">Dimensions: 30×30×50cm • Material: Ceramic, Linen</p>
+          <a class="add-cart" href="#">Add to Cart</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="small">© 2025 Haven &amp; Hue</div>
+      <div><a href="products.html">Back to Products</a></div>
+    </footer>
+  </div>
+</body>
+</html>
